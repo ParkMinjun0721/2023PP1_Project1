@@ -8,6 +8,8 @@ public class Main {
         System.out.println("Hello, world!");
         Student s1 = new Student("22000257","Minjun Park");
         System.out.println(s1.toString());
+        System.out.println(s1.toString());
+
 
 
 
