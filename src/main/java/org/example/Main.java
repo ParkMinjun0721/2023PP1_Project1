@@ -9,6 +9,5 @@ public class Main {
         Student s1 = new Student("22000257","Minjun Park");
         System.out.println(s1.toString());
 
-
     }
 }
