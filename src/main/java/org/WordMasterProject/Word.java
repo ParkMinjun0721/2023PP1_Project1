@@ -1,4 +1,4 @@
-package WordMasterProject;
+package org.WordMasterProject;
 
 public class Word {
     private int id;

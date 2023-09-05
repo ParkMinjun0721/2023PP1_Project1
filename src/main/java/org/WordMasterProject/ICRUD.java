@@ -1,4 +1,4 @@
-package WordMasterProject;
+package org.WordMasterProject;
 
 public interface ICRUD {
     public Object add();

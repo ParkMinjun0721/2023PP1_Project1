@@ -1,6 +1,5 @@
-package WordMasterProject;
+package org.WordMasterProject;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
 

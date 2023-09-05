@@ -1,4 +1,4 @@
-package WordMasterProject;
+package org.WordMasterProject;
 
 import java.util.Scanner;
 
