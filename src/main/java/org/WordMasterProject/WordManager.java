@@ -12,31 +12,30 @@ public class WordManager {
         while (true) {
             int menu = selectMenu();
 
-            if(menu == 0) break;
-            if(menu == 4) {
-                wordCRUD.addItem();
-            }
-            else if(menu == 1) {
+            if(menu == 0) break; //나가기
+            else if(menu == 1) { //모든 단어 보기
                 wordCRUD.listAll();
             }
-            else if(menu == 2) {
-                //수준별 단어보기
+            else if(menu == 2) { //수준별 단어 보기
+
             }
-            else if(menu == 3) {
-                //단어 검색
+            else if(menu == 3) { //단어 검색
+
             }
-            else if(menu == 5) {
-                wordCRUD.updateItem();
+            else if(menu == 4) { //단어 추가
+                wordCRUD.addItem();
             }
-            else if(menu == 6) {
-                wordCRUD.deleteItem();
+            else if(menu == 5) { //단어 수정
+
             }
-            else if(menu == 7) {
-                //파일 저장
+            else if(menu == 6) { //단어 삭제
+
+            }
+            else if(menu == 7) { //파일 저장
+
             }
         }
     }
-
     public int selectMenu() {
         System.out.print("*** 영단어 마스터 ***\n" +
                 "********************\n" +
