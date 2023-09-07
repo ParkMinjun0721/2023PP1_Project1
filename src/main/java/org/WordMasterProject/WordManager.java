@@ -12,7 +12,9 @@ public class WordManager {
         while (true) {
             int menu = selectMenu();
 
-            if(menu == 0) break; //나가기
+            if(menu == 0){
+                break; //나가기
+            }
             else if(menu == 1) { //모든 단어 보기
                 wordCRUD.listAll();
             }
