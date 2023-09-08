@@ -1,5 +1,6 @@
 package org.WordMasterProject;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -25,6 +26,32 @@ public class WordCRUD implements ICRUD{
         Word one = (Word)add();
         list.add(one);
         System.out.println("새 단어가 단어장에 추가되었습니다 !!! ");
+    }
+    public void deleteItem() {
+        System.out.print("=> 삭제할 단어 검색 : ");
+        String tmp = s.next();
+        ArrayList<Integer> list = this.listAll(tmp);
+
+        System.out.print("=> 삭제할 번호 선택 : ");
+        int dn = s.nextInt();
+
+        System.out.println(("단어가 삭제되었습니다."));
+    }
+    public void updateItem() {
+        System.out.print("=> 수정할 단어 검색 : ");
+        String tmp = s.next();
+        ArrayList<Integer> list = this.listAll(tmp);
+
+        System.out.print("=> 수정할 번호 선택 : ");
+        int un = s.nextInt();
+
+
+        System.out.println("단어가 수정되었습니다.");
+    }
+    public void searchItem() {
+        System.out.print("=> 검색할 단어 입력 : ");
+        String tmp = s.next();
+        ArrayList<Integer> list = this.listAll(tmp);
     }
     @Override
     public int update(Object obj) {
@@ -63,4 +90,5 @@ public class WordCRUD implements ICRUD{
         System.out.println("--------------------------------");
         return idlist;
     }
+
 }

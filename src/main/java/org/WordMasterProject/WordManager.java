@@ -24,16 +24,16 @@ public class WordManager {
                 ment();
             }
             else if(menu == 3) { //단어 검색
-                ment();
+                wordCRUD.searchItem();
             }
             else if(menu == 4) { //단어 추가
                 wordCRUD.addItem();
             }
             else if(menu == 5) { //단어 수정
-                ment();
+                wordCRUD.updateItem();
             }
             else if(menu == 6) { //단어 삭제
-                ment();
+                wordCRUD.deleteItem();
             }
             else if(menu == 7) { //파일 저장
                 ment();
