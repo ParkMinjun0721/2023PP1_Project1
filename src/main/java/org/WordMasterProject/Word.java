@@ -46,6 +46,8 @@ public class Word {
     }
     public String toString(){
         String slevel = "";
+        if(level>3) level = 3; //레벨이 3을 넘으면 그냥 3으로 설정.
+
         for(int i = 0; i<level ; i++) slevel += "*";
         String str = String.format("%-3s", slevel) +
                 String.format("%15s", word) + "  " + meaning;
