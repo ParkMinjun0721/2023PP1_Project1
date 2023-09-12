@@ -30,12 +30,23 @@ public class WordCRUD implements ICRUD{
     public void deleteItem() {
         System.out.print("=> 삭제할 단어 검색 : ");
         String tmp = s.next();
-        ArrayList<Integer> list = this.listAll(tmp);
+        ArrayList<Integer> dlist = this.listAll(tmp);
 
         System.out.print("=> 삭제할 번호 선택 : ");
         int dn = s.nextInt();
 
-        System.out.println(("단어가 삭제되었습니다."));
+        System.out.print("정말로 삭제하실래요?(Y/n) ");
+        String yn = s.next();
+
+        if(yn.equalsIgnoreCase("y")){
+            list.remove((int)dlist.get(dn-1));
+            System.out.println("단어가 삭제되었습니다. ");
+        }else if(yn.equalsIgnoreCase("n")){
+            System.out.println("취소되었습니다. ");
+        }else{
+            System.out.println("유효하지 않은 입력입니다. 메인 메뉴로 돌아갑니다.");
+        }
+
     }
     public void updateItem() {
         System.out.print("=> 수정할 단어 검색 : ");
@@ -44,6 +55,8 @@ public class WordCRUD implements ICRUD{
 
         System.out.print("=> 수정할 번호 선택 : ");
         int un = s.nextInt();
+
+
 
 
         System.out.println("단어가 수정되었습니다.");
