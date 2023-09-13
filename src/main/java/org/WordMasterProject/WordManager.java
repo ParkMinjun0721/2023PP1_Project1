@@ -1,5 +1,6 @@
 package org.WordMasterProject;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class WordManager {
@@ -8,7 +9,8 @@ public class WordManager {
     WordManager(){
         wordCRUD = new WordCRUD(s);
     }
-    public void start() {
+    public void start() throws IOException {
+        WordCRUD.loadFile();
         while (true) {
             int menu = selectMenu();
 
@@ -36,7 +38,7 @@ public class WordManager {
                 wordCRUD.deleteItem();
             }
             else if(menu == 7) { //파일 저장
-                ment();
+                wordCRUD.saveFile();
             }
         }
     }

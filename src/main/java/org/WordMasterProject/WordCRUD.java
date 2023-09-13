@@ -1,12 +1,14 @@
 package org.WordMasterProject;
 
+import java.io.*;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class WordCRUD implements ICRUD{
-    ArrayList<Word> list;
+    static ArrayList<Word> list;
     Scanner s;
+    static final String filename = "Dictionary.txt";
     WordCRUD(Scanner s){
         list = new ArrayList<>();
         this.s = s;
@@ -69,6 +71,36 @@ public class WordCRUD implements ICRUD{
         String tmp = s.next();
         ArrayList<Integer> list = this.listAll(tmp);
     }
+    public static void loadFile() throws IOException {
+        BufferedReader bfrd = new BufferedReader(new FileReader(filename));
+        int n=0;
+        String words;
+
+        while(true){
+            words = bfrd.readLine();
+
+            if(words==null){
+                break;
+            }
+
+            String data[] = words.split("\\|");
+            int level = Integer.parseInt(data[0]);
+            String word = data[1];
+            String meaning = data[2];
+            list.add(new Word(0, level, word, meaning));
+            n++;
+        }
+
+        bfrd.close();
+        System.out.println("==> "+n+"개 로딩 완료.");
+    }
+    public void saveFile() throws IOException {
+        BufferedWriter bfwt = new BufferedWriter(new OutputStreamWriter(System.out));
+        PrintWriter pw = new PrintWriter((new FileWriter("test.txt")));
+        String s;
+
+        pw.close();
+    }
     @Override
     public int update(Object obj) {
         return 0;
@@ -106,5 +138,6 @@ public class WordCRUD implements ICRUD{
         System.out.println("--------------------------------");
         return idlist;
     }
+
 
 }
