@@ -76,12 +76,7 @@ public class WordCRUD implements ICRUD{
         int n=0;
         String words;
 
-        while(true){
-            words = bfrd.readLine();
-
-            if(words==null){
-                break;
-            }
+        while((words = bfrd.readLine()) != null){
 
             String data[] = words.split("\\|");
             int level = Integer.parseInt(data[0]);
