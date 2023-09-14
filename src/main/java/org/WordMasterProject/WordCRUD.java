@@ -142,4 +142,23 @@ public class WordCRUD implements ICRUD{
         return idlist;
     }
 
+    public void listlevel() {
+        System.out.print("=> 레벨(1:초급, 2:중급, 3:고급) 선택 : )");
+        int n = s.nextInt();
+        int j = 0;
+
+        System.out.println("--------------------------------");
+        for(int i=0; i<list.size(); i++){
+            int lev = list.get(i).getLevel();
+
+            if(lev != n) {
+                continue;
+            }
+
+            System.out.print((j+1) + " ");
+            System.out.println(list.get(i).toString());
+            j++;
+        }
+        System.out.println("--------------------------------");
+    }
 }

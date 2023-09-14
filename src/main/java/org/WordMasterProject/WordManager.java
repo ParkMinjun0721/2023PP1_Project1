@@ -23,7 +23,7 @@ public class WordManager {
                 wordCRUD.listAll();
             }
             else if(menu == 2) { //수준별 단어 보기
-                ment();
+                wordCRUD.listlevel();
             }
             else if(menu == 3) { //단어 검색
                 wordCRUD.searchItem();
