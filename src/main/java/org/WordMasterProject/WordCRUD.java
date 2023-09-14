@@ -74,15 +74,20 @@ public class WordCRUD implements ICRUD{
     public static void loadFile() throws IOException {
         BufferedReader bfrd = new BufferedReader(new FileReader(filename));
         int n=0;
+        int level=0;
         String words;
+
 
         while((words = bfrd.readLine()) != null){
 
             String data[] = words.split("\\|");
-            int level = Integer.parseInt(data[0]);
+
+            level = Integer.parseInt(data[0]);
             String word = data[1];
             String meaning = data[2];
+
             list.add(new Word(0, level, word, meaning));
+
             n++;
         }
 
@@ -90,11 +95,14 @@ public class WordCRUD implements ICRUD{
         System.out.println("==> "+n+"개 로딩 완료.");
     }
     public void saveFile() throws IOException {
-        BufferedWriter bfwt = new BufferedWriter(new OutputStreamWriter(System.out));
-        PrintWriter pw = new PrintWriter((new FileWriter("test.txt")));
-        String s;
+        PrintWriter pw = new PrintWriter((new FileWriter(filename)));
+
+        for(Word s : list){
+            pw.write(s.toFileString() + "\n");
+        }
 
         pw.close();
+        System.out.println("==> 데이터 저장 완료.");
     }
     @Override
     public int update(Object obj) {
@@ -133,6 +141,5 @@ public class WordCRUD implements ICRUD{
         System.out.println("--------------------------------");
         return idlist;
     }
-
 
 }
