@@ -1,3 +1,5 @@
-1| name|이름
-1| bottle|물병
-1| umbrella|우산
+1|name|이름
+1|bottle|물병
+1|umbrella|우산
+1|professor|교수
+1|television|텔레비전

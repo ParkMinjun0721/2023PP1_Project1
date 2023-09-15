@@ -17,7 +17,7 @@ public class WordCRUD implements ICRUD{
     public Object add() {
         System.out.print("=> 난이도(1,2,3) & 새 단어 입력 : ");
         int level = s.nextInt();
-        String word = s.nextLine();
+        String word = s.nextLine().trim(); //공백 없애기
 
         System.out.print("뜻 입력 : ");
         String meaning = s.nextLine();
@@ -142,8 +142,8 @@ public class WordCRUD implements ICRUD{
         return idlist;
     }
 
-    public void listlevel() {
-        System.out.print("=> 레벨(1:초급, 2:중급, 3:고급) 선택 : )");
+    public void listlevel() { //menu 2
+        System.out.print("=> 레벨(1:초급, 2:중급, 3:고급) 선택 : ");
         int n = s.nextInt();
         int j = 0;
 
