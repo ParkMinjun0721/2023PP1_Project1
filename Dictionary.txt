@@ -3,3 +3,17 @@
 1|umbrella|우산
 1|professor|교수
 1|television|텔레비전
+2|enigma|수수께끼
+2|resilient|회복력 있는
+1|happy|행복한
+1|sun|태양
+3|ubiquitous|만연한, 어디에나 존재하는
+3|Ephemeral|순식간의, 덧없는
+3|Serendipity|우연한 행운, 뜻밖의 발견
+2|nimble|재빠른
+2|neuron|신경세포
+1|friend|친구
+1|family|가족
+1|home|집
+2|innovative|혁신적인, 창의적인
+1|pensilcase|필통

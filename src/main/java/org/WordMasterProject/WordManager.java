@@ -19,7 +19,7 @@ public class WordManager {
                         "See you again :)");
                 break; //나가기
             }
-            else if(menu == 1) { //모든 단어 보기
+                else if(menu == 1) { //모든 단어 보기
                 wordCRUD.listAll();
             }
             else if(menu == 2) { //수준별 단어 보기
@@ -57,8 +57,4 @@ public class WordManager {
                 "=> 원하는 메뉴는? ");
         return  s.nextInt();
     }
-    public void ment(){
-        System.out.println("Not implemented yet.");
-    }
-
 }
