@@ -50,6 +50,6 @@
 <img src = "https://github.com/ParkMinjun0721/2023PP1_Project1/blob/master/screenshots/deleteItem%20Screenshot2.png" width="600" height="400"> 
 
 이때 저장된 저장된 데이터 파일의 위치(경로)와 파일 이름은 무엇인가?
-  경로 : https://github.com/ParkMinjun0721/2023PP1_Project1/blob/master/Dictionary.txt
+  경로 : C:\Users\박민준\IdeaProjects\PP_Hello2\Dictionary.txt
   파일이름 : Dictionary.txt
 
